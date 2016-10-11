@@ -1,3 +1,9 @@
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+  typeof define === 'function' && define.amd ? define(factory) :
+  (global.setAnimationFrame = factory());
+}(this, (function () { 'use strict';
+
 /**
  *  set-animation-frame - Delay function calls without setTimeout.
  *     License:  MIT
@@ -5,48 +11,48 @@
  *        github:  https://github.com/julienetie/set-animation-frame
  *‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
  */
-(function(window){
+
+/**
+ * @param {Function} callback
+ * @param {Number} delay
+ */
+var setAnimationFrame = function setAnimationFrame(callback, delay) {
+  var duration = 0;
+  var terminate = false;
+  var requestId;
+
   /**
-   * @param {Function} callback
-   * @param {Number} delay
+   * The duration increments until it satisfys the delay.
+   * Once the delay is ready to be terminated, the requestID
+   * is returned. Whilst unsatisfied requestAnimationFrame
+   * calls the loop with the incremented timestamp
    */
-  window.setAnimationFrame = function(callback, delay) {
-    var duration = 0;
-    var terminate = false;
-    var requestId;
-
-
-    /**
-     * The duration increments until it satisfys the delay.
-     * Once the delay is ready to be terminated, the requestID
-     * is returned. Whilst unsatisfied requestAnimationFrame
-     * calls the loop with the incremented timestamp
-     */
-    function loop(timestamp) {
-        if (!duration) {
-            duration = timestamp;
-        }
-
-        if (timestamp > duration + delay && !terminate) {
-            if (callback) callback(timestamp);
-            terminate = true;
-        } else {
-            requestId = requestAnimationFrame(loop);
-        }
+  function loop(timestamp) {
+    if (!duration) {
+      duration = timestamp;
     }
-    
-    
-    /**
-     * Start the loop. 
-     */
-    loop(1);
-    
 
-    /**
-     * Returns the timestamp relative to the navigationStart attribute of the 
-     * PerformanceTiming interface
-     * @return {Number} - DOMHighResTimeStamp
-     */
-    return requestId;
+    if (timestamp > duration + delay && !terminate) {
+      if (callback) callback(timestamp);
+      terminate = true;
+    } else {
+      requestId = requestAnimationFrame(loop);
+    }
   }
-}(window));
+
+  /**
+   * Start the loop. 
+   */
+  loop(1);
+
+  /**
+   * Returns the timestamp relative to the navigationStart attribute of the 
+   * PerformanceTiming interface
+   * @return {Number} - DOMHighResTimeStamp
+   */
+  return requestId;
+};
+
+return setAnimationFrame;
+
+})));

@@ -1,0 +1,33 @@
+{
+  "name": "set-animation-frame",
+  "version": "0.0.1",
+  "description": "Delay a function call without the use of setTimeout()",
+  "main": "set-animation-frame.js",
+  "jsnext:main": "set-animation-frame.es.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julienetie/set-animation-frame.git"
+  },
+  "keywords": [
+    "settimeout",
+    "delay",
+    "requestanimationframe",
+    "timeout",
+    "timing"
+  ],
+  "author": "Julien Etienne",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julienetie/set-animation-frame/issues"
+  },
+  "homepage": "https://github.com/julienetie/set-animation-frame#readme",
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.2.0",
+    "rollup": "^0.36.3",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-node-resolve": "^2.0.0"
+  }
+}
