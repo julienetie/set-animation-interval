@@ -20,11 +20,11 @@ Checkout [Better Performance With requestAnimationFrame](https://dev.opera.com/a
 By Luz Caballero 
 ______
 
-#### Browser support using the [requestFrame](https://github.com/julienetie/request-frame) polyfill. ```npm i request-frame```
+#### Browser support using the [requestFrame](https://github.com/julienetie/request-frame) polyfill. ```npm i --save request-frame```
 - IE 5.5+
 
 #### Browser Support Without a  polyfill or vendor prefix usage.
-IE10+
+- IE10+
 
 See [caniuse](http://caniuse.com/#feat=requestanimationframe) for more details.
 
