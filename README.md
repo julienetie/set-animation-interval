@@ -3,8 +3,8 @@ Delay a function call without the use of setTimeout()
 
 ```javascript 
 // Heads up!
-// Animation timing functions work in enviroments that either render or simulates the rendering of frames. 
-//  (e.g. nodejs & browser dev tools do not render frames)
+// Animation timing functions work in enviroments that either render or 
+// simulate the rendering of frames. (Unlike nodejs & dev tools)
 ```
 
 ``` var requestID = setAnimationFrame(function, delay);```
