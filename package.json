@@ -1,18 +1,19 @@
 {
-  "name": "set-animation-frame",
-  "version": "0.1.1",
+  "name": "set-animation-interval",
+  "version": "0.0.1",
   "description": "Delay a function call without the use of setTimeout()",
-  "main": "set-animation-frame.js",
-  "jsnext:main": "set-animation-frame.es.js",
+  "main": "set-animation-interval.js",
+  "jsnext:main": "set-animation-interval.es.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/julienetie/set-animation-frame.git"
+    "url": "git+https://github.com/julienetie/set-animation-interval.git"
   },
   "keywords": [
     "settimeout",
+    "setInterval",
     "delay",
     "requestanimationframe",
     "timeout",
@@ -21,9 +22,9 @@
   "author": "Julien Etienne",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/julienetie/set-animation-frame/issues"
+    "url": "https://github.com/julienetie/set-animation-interval/issues"
   },
-  "homepage": "https://github.com/julienetie/set-animation-frame#readme",
+  "homepage": "https://github.com/julienetie/set-animation-interval#readme",
   "devDependencies": {
     "babel-preset-es2015-rollup": "^1.2.0",
     "rollup": "^0.36.3",

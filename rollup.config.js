@@ -2,8 +2,8 @@ import babel from 'rollup-plugin-babel';
 import nodeResolve from 'rollup-plugin-node-resolve';
 
 export default {
-	moduleName: 'setAnimationFrame',
-	entry: 'set-animation-frame.es.js',
+	moduleName: 'setAnimationInterval',
+	entry: 'set-animation-interval.es.js',
 	format: 'umd',
 	plugins: [babel({
 			exclude: 'node_modules/**'
@@ -12,6 +12,6 @@ export default {
 	],
 	targets: [{
 		format: 'umd',
-		dest: 'set-animation-frame.js'
+		dest: 'set-animation-interval.js'
 	}]
 };
