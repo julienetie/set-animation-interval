@@ -41,17 +41,3 @@ function setAnimationInterval(callback, delay, useFPS) {
 }
 
 export default setAnimationInterval;
-
-
-
-
-// // Just add water
-// var div = document.getElementById('water'); // Demo 
-
-// // Demo
-// function showFPSTime(test) {
-//     div.innerHTML = test;
-// }
-
-// // Demo
-// setAnimationInterval(showFPSTime, 16);
