@@ -1,12 +1,16 @@
 # setAnimationInterval()
 Repeatedly call a function without setInterval, call a function by approximate frames per second
 
+- `npm i --save set-animation-interval` = A better performing setInterval **with frames per second**  
+also...
+- `npm i --save set-animation-frame` = [A better performing setTimeout](https://github.com/julienetie/set-animation-frame)  
+
 ```javascript 
 // Heads up!
 // Animation timing functions work in enviroments that either render or 
 // simulate the rendering of frames. (Unlike nodejs & dev tools)
 ```
-
+### Usage:
 ```javascript
 var requestID = setAnimationInterval(<Callback>, <delay>, <useFPS>);
 ```
@@ -21,7 +25,7 @@ var requestID = setAnimationInterval(<Callback>, <delay>, <useFPS>);
 - _setAnimationInterval_ passes the given function the [DOMHighResTimeStamp](https://developer.mozilla.org/en-US/docs/Web/API/DOMHighResTimeStamp) as a parameter.
 
 
-## Why not use setInterval instead?
+## Why avoid setInterval?
 
 Checkout [requestAnimationFrame for Smart Animating](https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/) 
 By Paul Irish
