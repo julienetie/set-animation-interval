@@ -1,6 +1,6 @@
 {
   "name": "set-animation-interval",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Delay a function call without the use of setTimeout()",
   "main": "set-animation-interval.js",
   "jsnext:main": "set-animation-interval.es.js",
